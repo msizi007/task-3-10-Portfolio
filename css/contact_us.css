@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #2c2c2c;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-size: 1.3rem;
+}
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding: 0.2rem;
+}
+
+h2.text-center {
+  margin-top: 2rem;
+  text-align: center;
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+p.text-center {
+  text-align: center;
+  color: black;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.mx-4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.col-4 {
+  flex: 1;
+  max-width: 350px;
+}
+
+.col-8 {
+  flex: 2;
+}
+
+.contact-us {
+  padding: 2.5rem;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(102, 126, 234, 0.3),
+    rgba(118, 75, 162, 0.3)
+  );
+  z-index: -1;
+}
+
+.contact-us h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.contact-us p {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: black;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.contact-us p:last-child {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: rgba(100, 255, 218, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #64ffda;
+}
+
+.form {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.entry {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.entry label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.entry input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.entry input:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.entry input:focus + label,
+.entry input:not(:placeholder-shown) + label {
+  color: #667eea;
+}
+
+/* Hover effects */
+.contact-us:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+button {
+  padding: 1rem 2rem;
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1rem;
+}
+button:hover {
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.right a {
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .col-4,
+  .col-8 {
+    max-width: 100%;
+    flex: none;
+  }
+
+  .contact-us {
+    padding: 2rem;
+    background-attachment: scroll;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+
+  h2.text-center {
+    font-size: 2rem;
+  }
+
+  .mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .row {
+    padding: 1rem;
+  }
+
+  .contact-us {
+    padding: 1.5rem;
+  }
+
+  .form {
+    padding: 1rem;
+  }
+}

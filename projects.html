@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Projects</title>
+    <link rel="stylesheet" href="css/projects.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">Converter Hub</h2>
+      <p class="slogan">A collection of useful conversion tools.</p>
+      <div class="tabs">
+        <div id="tab-file-transfer" class="tab active">File Transfer</div>
+        <div id="tab-temperature" class="tab">Temperature</div>
+        <div id="tab-scientific" class="tab">Scientific</div>
+        <div id="tab-metric" class="tab">Metric</div>
+      </div>
+      <section id="file-transfer">
+        <h4>File Transfer Time Calculator</h4>
+        <p>File Size</p>
+        <div class="row">
+          <div class="col-4">
+            <input type="number" id="file-size" />
+          </div>
+          <div class="col-8">
+            <select id="file-unit">
+              <option value="GB">Gigabytes (GB)</option>
+              <option value="MB">Megabytes (MB)</option>
+              <option value="KB">Kilobytes (KB)</option>
+            </select>
+          </div>
+        </div>
+        <p>Internet Speed</p>
+        <div class="row">
+          <div class="col-4">
+            <input type="number" id="speed" />
+          </div>
+          <div class="col-8">
+            <select id="speed-unit">
+              <option value="Mbps">Megabits/sec (Mbps)</option>
+              <option value="Gbps">Gigabits/sec (Gbps)</option>
+              <option value="Kbps">Kilobits/sec (Kbps)</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary" id="btn-calc-time">Calculate</button>
+        <div class="file-answer-display answer-display" style="display: none">
+          <p class="bold-display">Estimated Time:</p>
+          <p class="text-primary-bold" id="estimated-time">0 Second(s)</p>
+        </div>
+      </section>
+      <section id="temperature" style="display: none">
+        <h4>Temperature Converter</h4>
+        <p>Value to Convert</p>
+        <input type="number" id="temp-input" />
+        <p>From:</p>
+        <select id="temp-unit">
+          <option value="C">Celsius (°C)</option>
+          <option value="F">Fereinheit (°F)</option>
+        </select>
+        <button class="btn btn-primary" id="btn-convert-temp">Convert</button>
+        <div class="temp-answer-display answer-display" style="display: none">
+          <p class="bold-display">Converted Value:</p>
+          <p class="text-primary-bold" id="converted-value">0 Second(s)</p>
+        </div>
+      </section>
+      <section id="scientific" style="display: none">
+        <h4>Scientific Notation Converter</h4>
+        <p>Standard Number:</p>
+        <input type="number" id="sci-input" />
+        <button class="btn btn-primary" id="btn-convert-sci">Convert</button>
+        <div class="sci-answer-display answer-display" style="display: none">
+          <p class="bold-display">Scientific Notation:</p>
+          <p class="text-primary-bold" id="sci-value">0 Second(s)</p>
+        </div>
+      </section>
+      <section id="metric" style="display: none">
+        <h4>Metric Prefix Converter</h4>
+        <p>Value:</p>
+        <input type="number" id="metric-input" />
+        <div class="row">
+          <div class="col-6">
+            <p>From:</p>
+            <select id="metric-from">
+              <option value="G">Giga (G)</option>
+              <option value="M">Mega (M)</option>
+              <option value="k">Kilo (k)</option>
+              <option value="B">Base Unit</option>
+              <option value="m">milli (m)</option>
+              <option value="µ">micro (µ)</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <p>To:</p>
+            <select id="metric-to">
+              <option value="G">Giga (G)</option>
+              <option value="M">Mega (M)</option>
+              <option value="k">Kilo (k)</option>
+              <option value="B">Base Unit</option>
+              <option value="m">milli (m)</option>
+              <option value="µ">micro (µ)</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary" id="btn-convert-metric">Convert</button>
+        <div class="metric-answer-display answer-display" style="display: none">
+          <p class="bold-display">Converted Value:</p>
+          <p class="text-primary-bold" id="metric-value">0 Second(s)</p>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/projects.js"></script>
+  </body>
+</html>
