@@ -2,3 +2,4 @@
 
 # Portfolio Website
 - This project showcases all the projects and what I have done...
+The site is publicly available @ https://portfolio-h13j.onrender.com
