@@ -141,6 +141,9 @@ select {
   html {
     font-size: 100%;
   }
+  .container {
+    width: 80%;
+  }
 }
 @media only screen and (min-width: 1200px) {
   html {
@@ -150,5 +153,29 @@ select {
 @media only screen and (min-width: 1440px) {
   html {
     font-size: 140%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .container {
+    width: 90%;
+  }
+  .tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .col-4,
+  .col-6,
+  .col-8 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 365px) {
+  html {
+    font-size: 70%;
   }
 }

@@ -45,6 +45,7 @@ body {
   align-items: center;
 }
 .card-body p {
+  font-family: roboto;
   font-size: 1.2rem;
 }
 .card-img {
@@ -82,5 +83,22 @@ a {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 80%;
+  }
+  .card {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+  .card {
+    width: 85%;
   }
 }
