@@ -85,12 +85,15 @@ BtnConvMetric.addEventListener("click", () => {
     µ: 1e-6,
   };
 
-  
-  
-  
+  // Convert to base unit first
+  let valueInBaseUnits = _metricInput * siFactors[_metricFrom];
+
+  // Convert from base unit to target unit
+  let convertedValue = valueInBaseUnits / siFactors[_metricTo];
+
   console.log(valueInBaseUnits, convertedValue);
 
-  metricAnswerDisplay.style.display = 'block';
+  metricAnswerDisplay.style.display = "block";
   metricValue.textContent = convertedValue;
 });
 
